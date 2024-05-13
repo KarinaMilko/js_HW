@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-head {
+  background-color: bisque;
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.btm {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.btm-log:hover,
+.btm-reg:hover {
+  background-color: blue;
+  color: white;
+}
+
+.btm-log,
+.btm-reg {
+  border: 1px solid grey;
+  padding: 10px 20px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  padding: 10px;
+}
+.user-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
