@@ -21,7 +21,7 @@ console.log(typeof "java script");
 
 console.log(typeof "100");
 
-let num = 1;
+const num = 1;
 num += 11;
 console.log(num);
 num -= 11;
@@ -30,16 +30,16 @@ num *= 11;
 console.log(num);
 num /= 11;
 console.log(num);
-num = ++num;
+++num;
 console.log(num);
-num = --num;
+--num;
 console.log(num);
 
-let firstNumber = +prompt("Напиши число:");
+const firstNumber = +prompt("Напиши число:");
 alert(firstNumber ** 2);
 
-let firstNum = +prompt("Напиши перше число:");
-let secondNum = +prompt("Напиши друге число:");
+const firstNum = +prompt("Напиши перше число:");
+const secondNum = +prompt("Напиши друге число:");
 alert((+firstNum + +secondNum) / 2);
 
 const amountMin = +prompt("Кількість хвилин: ");
