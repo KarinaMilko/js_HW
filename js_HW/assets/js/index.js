@@ -10,7 +10,7 @@ console.log(res2);
 
 const e = 48;
 const f = 10;
-const res3 = +e + +f;
+const res3 = e + f;
 console.log(res3);
 
 console.log(typeof 11);
@@ -40,7 +40,7 @@ alert(firstNumber ** 2);
 
 const firstNum = +prompt("Напиши перше число:");
 const secondNum = +prompt("Напиши друге число:");
-alert((+firstNum + +secondNum) / 2);
+alert((firstNum + secondNum) / 2);
 
 const amountMin = +prompt("Кількість хвилин: ");
 console.log(amountMin * 60);
