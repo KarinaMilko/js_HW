@@ -1,5 +1,11 @@
 // 1) Реалізувати функцію isWorkingAgePerson, яка буде перевіряти, чи працездатного людина віку (наприклад, від 16 до 64)
 
+/**
+ * @function isWorkingAgePerson
+ * @param {number} age - Working age
+ * @returns
+ */
+
 function isWorkingAgePerson(age) {
   return age > 16 && age < 64;
 }
@@ -9,6 +15,13 @@ console.log(isWorkingAgePerson(4));
 console.log(isWorkingAgePerson(88));
 
 // 2) Реалізувати функцію checkMultiplicity, яка приймає два числа і перевіряє, чи ділиться перше на друге націло (без залишку)
+
+/**
+ *
+ * @param {number} firstNumber
+ * @param {number} secondNumber
+ * @returns - Check multiplicity
+ */
 
 function checkMultiplicity(firstNumber, secondNumber) {
   return firstNumber % secondNumber === 0;
@@ -23,7 +36,9 @@ console.log(checkMultiplicity(15, 4));
 
 function isTriangle(firstSide, secondSide, thirdSide) {
   return (
-    firstSide + secondSide > thirdSide &&
+    firstSide + secondSide >= thirdSide &&
+    firstSide + thirdSide >= secondSide &&
+    secondSide + thirdSide >= firstSide &&
     firstSide > 0 &&
     secondSide > 0 &&
     thirdSide > 0
@@ -40,7 +55,9 @@ const thirdSide1 = +prompt("Input third side of triangle");
 
 function isTriangle1(firstSide1, secondSide1, thirdSide1) {
   if (
-    firstSide1 + secondSide1 > thirdSide1 &&
+    firstSide1 + secondSide1 >= thirdSide1 &&
+    firstSide1 + thirdSide1 >= secondSide1 &&
+    secondSide1 + thirdSide1 >= firstSide1 &&
     firstSide1 > 0 &&
     secondSide1 > 0 &&
     thirdSide1 > 0
@@ -52,14 +69,14 @@ function isTriangle1(firstSide1, secondSide1, thirdSide1) {
 }
 isTriangle1(firstSide1, secondSide1, thirdSide1);
 
-// 4 Реалізувати функції розрахунку площі трикутника
+// 4 Реалізувати функції розрахунку площі трикутника/
 
 const sideTriangle = 4;
 const heightTriangle = 6;
 
-function areaTriangle(sideTriangle, heightTriangle) {
+const areaTriangle = function (sideTriangle, heightTriangle) {
   return (sideTriangle * heightTriangle) / 2;
-}
+};
 console.log(areaTriangle(2, 5));
 console.log(areaTriangle(7, 10));
 document.write(
@@ -68,7 +85,7 @@ document.write(
 
 // Реалізувати функції розрахунку площі прямокутника
 
-function areaRectangle(widthTriangle, heightRectangle) {
+const areaRectangle = function (widthTriangle, heightRectangle) {
   return widthTriangle * heightRectangle;
-}
+};
 console.log(areaRectangle(5, 4));
