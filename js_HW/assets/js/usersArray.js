@@ -1,5 +1,6 @@
 // Для
-function User(name, surname, age, isMale, email, isSubscribed) {
+function User(id, name, surname, age, isMale, email, isSubscribed) {
+  this.id = id;
   this.firstName = name;
   this.lastName = surname;
   this.age = age;
@@ -12,6 +13,7 @@ const users = [];
 
 for (let i = 0; i < 10; i++) {
   const user = new User(
+    i,
     `Username${i}`,
     `Usersurname${i}`,
     Math.floor(Math.random() * 90),
@@ -65,6 +67,18 @@ const findIndexUser = users.find((user, index) => index === 2);
 if (findIndexUser) {
   findIndexUser.email = "oleksandr@example.com";
 }
+
+// *Впорядкувати користувачів за віком (sort).
+
+users.sort(function (a, b) {
+  if (a.age < b.age) {
+    return 1;
+  }
+  if (a.age > b.age) {
+    return -1;
+  }
+  return 0;
+});
 
 // *Перевірити, чи є серед користувачів користувач з email`ом useremail7@gmail.com.
 

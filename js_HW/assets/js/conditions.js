@@ -1,101 +1,101 @@
 // // Завдання на if
 // // 1
-// const isDay = true;
+const isDay = true;
 
-// if (isDay) {
-//   document.write(
-//     `<p><span style="color:black; background:lightgrey"<span/>"Світла тема"</p>`
-//   );
-// } else {
-//   document.write(
-//     `<p><span style="color:white; background:black"><span/>"Темна тема"</p>`
-//   );
-// }
+if (isDay) {
+  document.write(
+    `<p><span style="color:black; background:lightgrey"<span/>"Світла тема"</p>`
+  );
+} else {
+  document.write(
+    `<p><span style="color:white; background:black"><span/>"Темна тема"</p>`
+  );
+}
 
 // // // 2
-// const isOnline = true;
-// const status = isOnline
-//   ? " "
-//   : "Ваше повідомлення буде відправлено при під'єднанні до мережі Інтернет";
+const isOnline = true;
+const status = isOnline
+  ? " "
+  : "Ваше повідомлення буде відправлено при під'єднанні до мережі Інтернет";
 
-// document.write(status);
+document.write(status);
 
 // // 3
-// let price = 800;
-// const discount1 = 3;
-// const discount2 = 5;
+let price = 800;
+const discount1 = 3;
+const discount2 = 5;
 
-// if (price >= 500 && price < 800) {
-//   console.log(price - (price * discount1) / 100);
-// } else if (price >= 800) {
-//   console.log(price - (price * discount2) / 100);
-// } else {
-//   console.log(price);
-// }
+if (price >= 500 && price < 800) {
+  console.log(price - (price * discount1) / 100);
+} else if (price >= 800) {
+  console.log(price - (price * discount2) / 100);
+} else {
+  console.log(price);
+}
 
 // // 4
-// const isLogin = false;
-// const name = prompt("Input name");
-// const photo = `https://wiki.legalaid.gov.ua/images/e/e2/Person1.jpg`;
-// const logo = `https://cdn6.aptoide.com/imgs/5/d/1/5d187923c2f94bf506bc9444ddf02516_icon.png`;
+const isLogin = false;
+const name = prompt("Input name");
+const photo = `https://wiki.legalaid.gov.ua/images/e/e2/Person1.jpg`;
+const logo = `https://cdn6.aptoide.com/imgs/5/d/1/5d187923c2f94bf506bc9444ddf02516_icon.png`;
 
-// let authBlock = "";
+let authBlock = "";
 
-// if (isLogin) {
-//   authBlock = `
-//    <div class="user">
-//   <img class="user-img" src="${photo}" alt="photo">
-//   <p class="user-name">${name}</p>
-//   </div>`;
-// } else {
-//   authBlock = `
-//     <div class="btm">
-//   <bottom class="btm-log">Login</bottom>
-//   <bottom class="btm-reg">Register</bottom>
-//   </div>`;
-// }
-// document.write(`
-// <header class="main-head">
-// <div class="main-nav">
-// <img class="logo-img" src="${logo}" alt="photo">
-// ${authBlock}
-// <div/>
-// </header>`);
+if (isLogin) {
+  authBlock = `
+   <div class="user">
+  <img class="user-img" src="${photo}" alt="photo">
+  <p class="user-name">${name}</p>
+  </div>`;
+} else {
+  authBlock = `
+    <div class="btm">
+  <bottom class="btm-log">Login</bottom>
+  <bottom class="btm-reg">Register</bottom>
+  </div>`;
+}
+document.write(`
+<header class="main-head">
+<div class="main-nav">
+<img class="logo-img" src="${logo}" alt="photo">
+${authBlock}
+<div/>
+</header>`);
 
 // Завдання на switch..case
 // 1
-// const dayNumber = +prompt("Номер дня тижня: ");
-// switch (dayNumber) {
-//   case 1:
-//     alert("Понеділок");
-//     break;
+const dayNumber = +prompt("Номер дня тижня: ");
+switch (dayNumber) {
+  case 1:
+    alert("Понеділок");
+    break;
 
-//   case 2:
-//     alert("Вівторок");
-//     break;
+  case 2:
+    alert("Вівторок");
+    break;
 
-//   case 3:
-//     alert("Середа");
-//     break;
+  case 3:
+    alert("Середа");
+    break;
 
-//   case 4:
-//     alert("Четвер");
-//     break;
+  case 4:
+    alert("Четвер");
+    break;
 
-//   case 5:
-//     alert("П'ятниця");
-//     break;
+  case 5:
+    alert("П'ятниця");
+    break;
 
-//   case 6:
-//     alert("Субота");
-//     break;
+  case 6:
+    alert("Субота");
+    break;
 
-//   case 7:
-//     alert("Неділя");
-//     break;
+  case 7:
+    alert("Неділя");
+    break;
 
-//   default:
-//     alert("дня з таким номером не існує");
+  default:
+    alert("дня з таким номером не існує");
 // }
 // 2
 const dayMonth = +prompt("Введіть день місяця");
