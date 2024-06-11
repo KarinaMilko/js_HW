@@ -34,13 +34,13 @@ User.prototype.getFullName = function () {
 // Реалізувати мінімум 4 завдання:
 // Отримати масив користувачів, які не підписані (not subscribed).
 function isNotSubscribed(u) {
-  return u.isSubscribed === false;
+  return !u.isSubscribed;
 }
 
 const userNotSubscribed = users.filter(isNotSubscribed);
 // Вивести список повних імен користувачів.
-function fullName(user) {
-  document.write(`<li>${user.firstName} ${user.lastName}</li>`);
+function fullName(u) {
+  document.write(`<li>${u.getFullName()}</li>`);
 }
 document.write("<ul>");
 users.forEach(fullName);
@@ -49,7 +49,7 @@ document.write("</ul>");
 // Отримати масив повних імен осіб жіночої статі шкільного віку (6 – 18 років).
 
 function isFemale(user) {
-  return user.isMale === false && user.age >= 6 && user.age < 18;
+  return !user.isMale && user.age >= 6 && user.age < 18;
 }
 const userFemale = users.filter(isFemale);
 console.table(userFemale);
@@ -62,7 +62,7 @@ const updateEmailUser = users.filter(
 
 // Змінити email користувачу з id 2 (можна спробувати використати find).
 
-const findIndexUser = users.find((user, index) => index === 2);
+const findIndexUser = users.find((user) => user.id === 2);
 
 if (findIndexUser) {
   findIndexUser.email = "oleksandr@example.com";
@@ -71,13 +71,7 @@ if (findIndexUser) {
 // *Впорядкувати користувачів за віком (sort).
 
 users.sort(function (a, b) {
-  if (a.age < b.age) {
-    return 1;
-  }
-  if (a.age > b.age) {
-    return -1;
-  }
-  return 0;
+  return b.age - a.age;
 });
 
 // *Перевірити, чи є серед користувачів користувач з email`ом useremail7@gmail.com.
@@ -90,6 +84,7 @@ const isUserEmail = users.some(findUserEmail);
 // *Перевірити, чи всі користувачі підписані (subscribed).
 
 function allUserSubscribed(user) {
-  return user.isSubscribed === users.length;
+  return user === user.length;
 }
 const isAllUserSubscribed = users.every(allUserSubscribed);
+console.log(isAllUserSubscribed);
