@@ -84,7 +84,7 @@ const isUserEmail = users.some(findUserEmail);
 // *Перевірити, чи всі користувачі підписані (subscribed).
 
 function allUserSubscribed(user) {
-  return user === user.length;
+  return user.isSubscribed;
 }
 const isAllUserSubscribed = users.every(allUserSubscribed);
 console.log(isAllUserSubscribed);
