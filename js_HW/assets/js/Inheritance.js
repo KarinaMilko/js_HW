@@ -58,7 +58,7 @@ class PassengerTransport extends Vehicle {
     this.passengerCount = passengerCount;
   }
   addPassenger() {
-    if (this.passengerCount <= this.passengerLimit) {
+    if (this.passengerCount < this.passengerLimit) {
       this.passengerCount++;
       return true;
     } else {
