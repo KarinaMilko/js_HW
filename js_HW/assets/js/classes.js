@@ -82,7 +82,7 @@ class Post {
       "html",
       "css",
     ];
-    if (!validHashtag.includes(value) && this.hashtags.length > 6) {
+    if (!validHashtag.includes(value) && this.hashtags.length >= 6) {
       throw new RangeError("there is no such hashtag");
     }
     this.hashtags.push(value);
